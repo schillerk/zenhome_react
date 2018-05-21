@@ -1,3 +1,27 @@
+.pure-g {
+  letter-spacing: normal;
+}
+
+.half-text {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.half-first {
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+
+.half-second {
+  padding-left: 30px;
+  box-sizing: border-box;
+}
+
+.half {
+  margin-bottom: 70px;
+  margin-top: 70px;
+}
+
 .big-title {
   display: inline;
 }

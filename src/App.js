@@ -14,8 +14,9 @@ const pages = ["home", "government", "solution", "implementation", "careers"];
 class App extends Component {
   constructor(props) {
     super(props)
+    const current = window.location.href.split("/").slice(-1)[0]
     this.state = {
-      currentPage: 'diversity'
+      currentPage: pages.indexOf(current) ? current : 'home'
     }
   }
 
@@ -38,10 +39,15 @@ class App extends Component {
     }
   }
 
+  handleChange(page) {
+    this.setState({currentPage: page});
+    window.history.pushState(null, null, page);
+  }
+
   renderPages() {
     return pages.map(page => (
       <div className="title-inner-test" key={page}>
-        <div className="title-menu-test">
+        <div className="title-menu-test" onClick={this.handleChange.bind(this, page)}>
           <h6 className="dissapear">{page}</h6>
         </div>
       </div>
