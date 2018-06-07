@@ -1,38 +1,42 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Icon from './Icon';
-import Text from './Text';
-import BigImage from './BigImage';
-import TileText from './TileText';
 import Home from './Home';
 import Careers from './Careers';
 import Diversity from './Diversity';
+import Footer from './Footer';
 
-const pages = ["home", "government", "solution", "implementation", "careers"];
+const pages = ["home", "government", "solution", "implementation", "careers", "diversity"];
 
 class App extends Component {
   constructor(props) {
     super(props)
     const current = window.location.href.split("/").slice(-1)[0]
     this.state = {
-      currentPage: pages.indexOf(current) ? current : 'home'
+      currentPage: pages.indexOf(current) > -1 ? current : 'home'
     }
   }
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
+
+    document.addEventListener("DOMContentLoaded", function(){
+      var el = document.getElementById('nav-icon2')
+      el.onclick = function() {
+        el.classList.toggle('open');
+      };
+    });
   }
 
   handleScroll (event) {
     var nav = document.getElementById('testEl');
-    if ( window.pageYOffset > 50 ) {
+    if ( window.pageYOffset > 30 ) {
         nav.classList.add("testElClass1");
     } else {
         nav.classList.remove("testElClass1");
     }
     var navIcon = document.getElementById('nav-icon2');
-    if ( window.pageYOffset > 50 ) {
+    if ( window.pageYOffset > 30 ) {
         navIcon.classList.add("nav-icon-color");
     } else {
         navIcon.classList.remove("nav-icon-color");
@@ -42,6 +46,7 @@ class App extends Component {
   handleChange(page) {
     this.setState({currentPage: page});
     window.history.pushState(null, null, page);
+    window.scrollTo(0, 0);
   }
 
   renderPages() {
@@ -97,7 +102,6 @@ class App extends Component {
             </ul>
           </nav>
         </div>
-        <div className="header-buffer"></div>
         <div className="header-wrap" id="testEl">
           <div className="header">
             <a className="logo" href="index.html">
@@ -107,7 +111,7 @@ class App extends Component {
           </div>
         </div>
         {this.renderCurrentPage()}
-        <v-footer></v-footer>
+        <Footer />
       </div>
     );
   }

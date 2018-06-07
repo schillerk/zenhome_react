@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 
-import Icon from './Icon';
 import Text from './Text';
 import Half from './Half';
-import BigImage from './BigImage';
-import TileText from './TileText';
 
 class Diversity extends Component {
   render() {

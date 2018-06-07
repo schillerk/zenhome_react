@@ -4,8 +4,8 @@ class TileText extends Component {
 	render() {
 		const { title, text } = this.props;
 		return (
-			<div class="icon-text">
-        <div class="icon-text-bold">
+			<div className="icon-text">
+        <div className="icon-text-bold">
           {title}
         </div>
           {text}

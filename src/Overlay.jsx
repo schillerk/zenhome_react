@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import earth from './pictures/earth.jpg';
 import Text from './Text';
 
-class Half extends Component {
+class Overlay extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -30,49 +30,51 @@ class Half extends Component {
 
 	renderImage(classes) {
 		return (
-			<div className={`pure-u-md-1-1 pure-u-lg-1-2 ${classes}`}>
+			<div className={`pure-u-md-1-1 pure-u-lg-2-3 overlay-half-img ${classes}`}>
 				<img className="pure-img" src={earth} alt="earth"/>
 			</div>
 		)
 	}
 
 	renderText(classes) {
-		const {title, text} = this.props;
+		const {title, text, reversed} = this.props;
 		return (
-			<div className={`pure-u-md-1-1 pure-u-lg-1-2 half-text ${classes}`}>
-				<Text shouldCenter title={title} text={text} />
+			<div className={`pure-u-md-1-1 pure-u-lg-1-3 overlay-half-text
+					${classes} ${reversed ? 'overlay-half-text-reversed' : ''}`}>
+				<Text paragraphClass={'overlay-half-paragraph'} title={title} text={text} />
 			</div>
 		)
 	}
 
 	renderContent() {
 		const { fullWidth } = this.state;
-		const extraClass = fullWidth ? 'half-full' : '';
-		const {reversed} = this.props;
 
+		const fullClass = fullWidth ? 'half-full' : '';
+
+		const {reversed} = this.props;
 		if (reversed && !fullWidth) {
 			return (
 				<div>
-					{this.renderText(`half-first ${extraClass}`)}
-					{this.renderImage(`half-second ${extraClass}`)}
+					{this.renderText(`overlay-half-first ${fullClass}`)}
+					{this.renderImage(`overlay-half-second ${fullClass}`)}
 				</div>
 			)
 		}
 		return (
 			<div>
-				{this.renderImage(`half-first ${extraClass}`)}
-				{this.renderText(`half-second ${extraClass}`)}
+				{this.renderImage(`overlay-half-first ${fullClass}`)}
+				{this.renderText(`overlay-half-second ${fullClass}`)}
 			</div>
 		)
 	}
 
 	render() {
 		return (
-			<div className="pure-g half">
+			<div className="overlay-half">
 				{this.renderContent()}
 			</div>
 		);
 	}
 }
 
-export default Half;
+export default Overlay;

@@ -4,6 +4,7 @@ import Icon from './Icon';
 import Text from './Text';
 import BigImage from './BigImage';
 import TileText from './TileText';
+import Button from './Button';
 
 class Home extends Component {
   render() {
@@ -11,19 +12,20 @@ class Home extends Component {
      <span>
         <Text
           title="IMPACT DRIVEN TECHNOLOGY"
-          text="We build software that integrate and analyze fragmented health information systems.<br></br>
+          text="We build software that integrate and analyze fragmented health information systems.<br />
             Our tools empower decision-makers to contextualize their data, catalyze meaningful breakthroughs in performance, and respond to national-scale humanitarian emergencies with unpredencented speed."
+          big
         />
         <div className="maybe-center">
-          <vue-button
+          <Button
             link="background.html"
-            classing="btn-fill"
-            text="CONTACT US">
-          </vue-button>
-          <vue-button
+            text="CONTACT US"
+            fill
+          />
+          <Button
             link="background.html"
-            text="LEARN MORE">
-          </vue-button>
+            text="LEARN MORE"
+          />
         </div>
         <BigImage
           title="BRING DATA TO GLOBAL&nbsp;HEALTH"
@@ -56,15 +58,16 @@ class Home extends Component {
           </div>
         </div>
         <div className="center">
-          <vue-button
+          <Button
             link="background.html"
-            classing="btn-fill"
-            text="CONTACT US">
-          </vue-button>
-          <vue-button
+            text="CONTACT US"
+            fill
+          >
+          </Button>
+          <Button
             link="background.html"
-            text="LEARN MORE">
-          </vue-button>
+            text="LEARN MORE"
+          />
         </div>
       </span>
     )
