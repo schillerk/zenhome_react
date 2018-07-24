@@ -18,12 +18,12 @@ class Home extends Component {
         />
         <div className="maybe-center">
           <Button
-            link="background.html"
+            onClick={this.props.handleChange.bind(this, 'workwithus')}
             text="GET IN TOUCH"
             fill
           />
           <Button
-            link="background.html"
+            onClick={this.props.handleChange.bind(this, 'about')}
             text="LEARN MORE"
           />
         </div>
@@ -59,13 +59,13 @@ class Home extends Component {
         </div>
         <div className="center">
           <Button
-            link="background.html"
+            onClick={this.props.handleChange.bind(this, 'workwithus')}
             text="GET IN TOUCH"
             fill
           >
           </Button>
           <Button
-            link="background.html"
+            onClick={this.props.handleChange.bind(this, 'about')}
             text="LEARN MORE"
           />
         </div>

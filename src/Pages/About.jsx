@@ -85,7 +85,7 @@ class About extends Component {
             <div className="feature-col pure-u-lg-1-3">
               <Icon img="analytics" />
               <TileText
-                title="No Assholes"
+                title="Technical Leadership"
                 text="Our visualization and transformation tools levelrage time-series, geospatial and statistical insights to empower health analysts."
               />
             </div>
@@ -137,7 +137,6 @@ class About extends Component {
         />
         <div className="center">
           <Button text="OPEN ROLES" fill onClick={this.props.handleChange.bind(this, 'careers')} />
-          <Button text="INTERNSHIPS" onClick={this.props.handleChange.bind(this, 'careers')} />
         </div>
       </div>
     )

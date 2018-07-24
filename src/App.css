@@ -104,7 +104,8 @@
 .spacer-line {
   width: 100vw;
   height: 22px;
-  max-width: 1200px; }
+  max-width: 1200px;
+  margin: auto; }
   .spacer-line--border {
     border-top: 1px solid #ccc; }
 
@@ -350,7 +351,9 @@
   max-width: 1200px;
   margin: auto;
   margin-top: 45px;
-  margin-bottom: -35px; }
+  margin-bottom: -35px;
+  position: relative;
+  top: -20px; }
   @media only screen and (min-width: 500px) {
     .legal-inner {
       padding-left: 50px; } }

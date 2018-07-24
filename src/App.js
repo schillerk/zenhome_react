@@ -102,13 +102,13 @@ class App extends Component {
 
   maybeRenderHome() {
     if (this.state.currentPage === 'home' || this.state.currentPage === '') {
-      return ( <Home /> );
+      return ( <Home handleChange={this.handleChange} /> );
     }
   }
 
   maybeRenderCareers() {
     if (this.state.currentPage === 'careers') {
-      return ( <Careers /> );
+      return ( <Careers handleChange={this.handleChange} /> );
     }
   }
 
@@ -120,19 +120,19 @@ class App extends Component {
 
   maybeRenderProduct() {
     if (this.state.currentPage === 'product') {
-      return ( <Product /> );
+      return ( <Product handleChange={this.handleChange} /> );
     }
   }
 
   maybeRenderPartnerships() {
     if (this.state.currentPage === 'workwithus') {
-      return ( <Partnerships /> );
+      return ( <Partnerships handleChange={this.handleChange} /> );
     }
   }
 
   maybeRenderFaq() {
     if (this.state.currentPage === 'faq') {
-      return ( <Faq /> );
+      return ( <Faq handleChange={this.handleChange} /> );
     }
   }
 
@@ -181,6 +181,8 @@ class App extends Component {
         <ReactCSSTransitionGroup
           transitionName="example"
           transitionEnterTimeout={300}
+          transitionAppear={true}
+          transitionAppearTimeout={500}
           transitionLeaveTimeout={10}
         >
           {this.maybeRenderHome()}

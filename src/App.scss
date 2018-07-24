@@ -125,6 +125,7 @@
   width: 100vw;
   height: 22px;
   max-width: 1200px;
+  margin: auto;
   &--border {
     border-top: 1px solid #ccc;
   }
@@ -444,6 +445,8 @@
   margin: auto;
   margin-top: 45px;
   margin-bottom: -35px;
+  position: relative;
+  top: -20px;
   @media only screen and (min-width: 500px) {
     padding-left: 50px;
   }

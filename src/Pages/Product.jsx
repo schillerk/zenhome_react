@@ -22,12 +22,14 @@ class Product extends Component {
         <Overlay
           title="Integrations"
           text="Health is cool, and so is space, that's why we're working on both instead of sleeping."
+          link="Download our report on interoperability"
           img={form}
         />
         <Spacer />
         <Overlay
           title="Analytics"
           text="Health is cool, and so is space, that's why we're working on both instead of sleeping."
+          link="Download the analytics capabilities summary"
           reversed
           img={map}
         />
@@ -35,12 +37,14 @@ class Product extends Component {
         <Overlay
           title="Data Quality"
           text="Health is cool, and so is space, that's why we're working on both instead of sleeping."
+          link="Download our guide to improving data quality"
           img={status}
         />
         <Spacer />
         <Overlay
           title="Artificial Intelligence"
           text="Health is cool, and so is space, that's why we're working on both instead of sleeping."
+          link="Download our primer on AI for global health"
           reversed
           img={line}
         />
@@ -48,6 +52,7 @@ class Product extends Component {
         <Overlay
           title="Privacy, Security, and Compliance"
           text="Health is cool, and so is space, that's why we're working on both instead of sleeping."
+          link="Download our regulatory white paper"
           img={team}
         />
       </div>

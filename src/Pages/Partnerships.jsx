@@ -26,12 +26,12 @@ class Partnerships extends Component {
         />
         <div className="maybe-center">
           <Button
-            link="background.html"
+            onClick={this.props.handleChange.bind(this, 'faq')}
             text="GET IN TOUCH"
             fill
           />
           <Button
-            link="background.html"
+            onClick={this.props.handleChange.bind(this, 'faq')}
             text="READ THE FAQ"
           />
         </div>
@@ -64,13 +64,13 @@ class Partnerships extends Component {
         <Spacer anti />
         <div className="center">
           <Button
-            link="background.html"
+            onClick={this.props.handleChange.bind(this, 'faq')}
             text="GET IN TOUCH"
             fill
           >
           </Button>
           <Button
-            link="background.html"
+            onClick={this.props.handleChange.bind(this, 'faq')}
             text="READ THE FAQ"
           />
         </div>
