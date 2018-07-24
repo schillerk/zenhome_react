@@ -4,10 +4,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.page {
-  position: relative;
-  top: 50px; }
-
 .qa-toggle {
   color: black;
   width: 25px;
@@ -24,16 +20,16 @@
   border-radius: 1px; }
 
 .qa-toggle span:first-of-type {
-  top: 25%;
-  bottom: 25%;
-  width: 10%;
-  left: 45%; }
+  top: 6px;
+  bottom: 6px;
+  width: 3px;
+  left: 11px; }
 
 .qa-toggle span:last-of-type {
-  left: 25%;
-  right: 25%;
-  height: 10%;
-  top: 45%; }
+  left: 6px;
+  right: 6px;
+  height: 3px;
+  top: 11px; }
 
 #plusminus {
   display: none; }
@@ -351,9 +347,7 @@
   max-width: 1200px;
   margin: auto;
   margin-top: 45px;
-  margin-bottom: -35px;
-  position: relative;
-  top: -20px; }
+  margin-bottom: -35px; }
   @media only screen and (min-width: 500px) {
     .legal-inner {
       padding-left: 50px; } }
@@ -403,7 +397,6 @@ p {
 .footer {
   width: 100%;
   background: #f5f8fa;
-  margin-top: 100px;
   margin-bottom: 35px; }
 
 .icon-text-bold {
