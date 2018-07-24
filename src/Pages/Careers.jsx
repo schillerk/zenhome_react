@@ -21,7 +21,7 @@ class Careers extends Component {
 
   render() {
     return (
-      <div>
+     <div className="page">
         <Text
           title="Careers at Zenysis"
           text="We've made extraordinary progress in our first year: our software is already helping governments meet the challenge of providing lifesaving healthcare to more than 100 million people.<br />

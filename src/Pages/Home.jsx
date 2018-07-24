@@ -9,7 +9,7 @@ import Button from '../Components/Button';
 class Home extends Component {
   render() {
     return (
-     <div>
+     <div className="page">
         <Text
           title="Impact Driven Technology"
           text="We build software that integrate and analyze fragmented health information systems.<br />

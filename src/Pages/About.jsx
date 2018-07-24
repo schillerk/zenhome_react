@@ -14,7 +14,7 @@ import Spacer from '../Components/Spacer'
 class About extends Component {
   render() {
     return (
-      <div>
+     <div className="page">
         <Text
           title="Tech for Global&nbsp;Good"
           text="We build the software that governments and international organizations need to confront some of the biggest challenges facing humanity.<br />

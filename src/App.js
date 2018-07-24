@@ -101,7 +101,7 @@ class App extends Component {
   }
 
   maybeRenderHome() {
-    if (this.state.currentPage === 'home') {
+    if (this.state.currentPage === 'home' || this.state.currentPage === '') {
       return ( <Home /> );
     }
   }

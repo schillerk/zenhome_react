@@ -13,7 +13,7 @@ import Spacer from '../Components/Spacer'
 class Product extends Component {
   render() {
     return (
-      <div>
+     <div className="page">
         <Text
           title="The Zenysis Data Platform"
           text="Working with data in disparate formats we build a single unified view to enable data analysis from any system in real-time."

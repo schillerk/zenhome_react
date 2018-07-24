@@ -4,6 +4,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.page {
+  position: relative;
+  top: 50px; }
+
 .qa-toggle {
   color: black;
   width: 25px;
@@ -396,7 +400,7 @@ p {
 .footer {
   width: 100%;
   background: #f5f8fa;
-  margin-top: 50px;
+  margin-top: 100px;
   margin-bottom: 35px; }
 
 .icon-text-bold {

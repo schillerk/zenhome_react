@@ -18,7 +18,7 @@ import buildings from '../pictures/picture2-vibrance4.jpg';
 class Partnerships extends Component {
   render() {
     return (
-      <div>
+     <div className="page">
         <Text
           title="Working Together"
           text="We engage our users as equal partners in the implementation process by taking the time to deeply understand their challenges, jointly explore solutions, and rapidly prototying our products with our users in the real world."

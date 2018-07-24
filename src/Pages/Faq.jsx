@@ -11,7 +11,7 @@ import Question from '../Components/Question';
 class Faq extends Component {
   render() {
     return (
-      <div>
+     <div className="page">
         <Text
           title="Frequently Asked Questions"
           text="We've done our best to curate answers to some of the top opportunities, concerns and questions we receive. If you don't see your question below, get in touch with info@zenysis.com and we'll get back to you as soon as we can."
