@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import Text from './Text';
-import Half from './Half';
+import Text from '../Components/Text';
+import Half from '../Components/Half';
 
 class Diversity extends Component {
   render() {

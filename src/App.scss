@@ -1,5 +1,158 @@
 * {
-    white-space: pre-line;
+  white-space: pre-line;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// https://stackoverflow.com/questions/38136077/how-to-morph-a-plus-sign-to-a-minus-sign-using-css-transition
+.qa-toggle {
+  color: black;
+  width: 25px;
+  height: 25px;
+  border: 0;
+  font-size: 1.5em;
+  top: 3px;
+  position: relative;
+}
+
+.qa-toggle span {
+  position: absolute;
+  transition: .3s;
+  background: black;
+  border-radius: 1px;
+}
+
+.qa-toggle span:first-of-type {
+  top: 25%;
+  bottom: 25%;
+  width: 10%;
+  left: 45%;
+}
+
+.qa-toggle span:last-of-type {
+  left: 25%;
+  right: 25%;
+  height: 10%;
+  top: 45%;
+}
+
+#plusminus {
+  display: none;
+}
+
+#plusminus:checked~.qa-toggle span:first-of-type,
+#plusminus:checked~.qa-toggle span:last-of-type {
+  transform: rotate(90deg);
+}
+
+#plusminus:checked~.qa-toggle span:last-of-type  {
+  left: 50%;
+  right: 50%;
+}
+
+.qa {
+  width: calc(100% - 100px);
+  max-width: 600px;
+  margin: auto;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 35px;
+  transition: .3s;
+}
+
+.question {
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.question-toggle {
+  padding: 5px;
+  font-size: 22px;
+}
+
+.example-enter {
+  opacity: 0.01;
+  transform: translateY(-10px);
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: .3s ease-in;
+  transform: translateY(0px);
+}
+
+.example-appear {
+  opacity: 0.01;
+  transform: translateY(-10px);
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: .3s ease-in;
+}
+
+.bebop-jobs {
+  margin: auto;
+  margin-top: -5rem;
+  z-index: 0;
+  position: relative;
+  max-width: 1200px;
+}
+
+.images .pure-u-lg-1-4 {
+  height: 220px;
+  overflow: hidden;
+}
+
+.no-hover:hover {
+  border-bottom: none !important;
+}
+
+.spacer {
+  width: 100vw;
+  height: 45px;
+}
+.spacer-line {
+  width: 100vw;
+  height: 22px;
+  max-width: 1200px;
+  &--border {
+    border-top: 1px solid #ccc;
+  }
+}
+
+.spacer-anti {
+  margin-top: -55px;
+}
+
+.language {
+  display: block !important;
+
+  &-option {
+    position: relative;
+    left: 6px;
+  }
+
+  &::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 3px solid #141414;
+    position: relative;
+    top: 12px;
+    right: -30px;
+  }
+}
+
+.language-dropdown {
+  position: relative;
+  top: 18px;
 }
 
 .menu {
@@ -12,6 +165,7 @@
   border-bottom: calc(.2vw + 1px) solid transparent;
   z-index: 2;
   display: inline-block;
+  cursor: pointer;
 }
 
 #home {
@@ -19,19 +173,19 @@
 
 }
 
-#product {
+#careers {
   color: #8f8ab7;
 }
 
-#capabilities {
+#workwithus {
   color:  #807aad;
 }
 
-#implementation {
+#about {
   color: #706aa3;
 }
 
-#careers {
+#product {
   color: #605c99;
 }
 
@@ -67,6 +221,8 @@
 .overlay-half {
   margin-bottom: 70px;
   margin-top: 70px;
+  max-width: 1200px;
+  margin: auto;
 
   &-img {
   }
@@ -90,8 +246,22 @@
   }
 }
 
+.overlay-full-text {
+  right: 0;
+  left: 0;
+  top: -25px;
+  width: 80%;
+  left: 10%;
+}
+
+
 .big-title {
   display: block;
+}
+
+.small-title {
+  font-size: 30px;
+  line-height: 35px;
 }
 
 .footer a {
@@ -120,7 +290,7 @@
   }
 
   .btn {
-    width: 168px;
+    min-width: 168px;
   }
 
   .center {
@@ -138,7 +308,6 @@
   }
 
   .btn {
-    width: 220px;
     display: block;
   }
 
@@ -162,14 +331,15 @@
 
 .images {
   position: relative;
+  margin: auto;
   margin-top: 50px;
   margin-bottom: 50px;
   width: 100%;
+  max-width: 1200px;
 }
 
 .features {
   position: relative;
-  width: calc(100% - 100px);
   max-width: 1200px;
   margin: auto;
   margin-top: 50px;
@@ -178,11 +348,14 @@
 
 .btn {
   font-size: 21px;
+  cursor: pointer;
+  padding-left: 40px;
+  padding-right: 40px;
   height: 56px;
   border-radius: 3px;
   display: block;
   text-align: center;
-  line-height: 60px;
+  line-height: 58px;
   color: #6e75b5;
   font-weight: 600;
   font-family: 'Roboto Condensed', sans-serif;
@@ -259,22 +432,27 @@
 }
 
 .legal-inner {
-  padding-left: 50px;
   opacity: .6;
   font-size: 12px;
   font-family: 'Open Sans', sans-serif;
-  width: 100%;
   max-width: 1200px;
   margin: auto;
-  margin-top: 35px;
-  margin-bottom: 35px;
+  margin-top: 45px;
+  margin-bottom: -35px;
+  @media only screen and (min-width: 500px) {
+    padding-left: 50px;
+  }
+  @media only screen and (max-width: 500px) {
+    padding-left: 30px;
+  }
 }
 
 .legal-inner .logo {
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 2px;
   line-height: 16px;
-  padding-right: 10px;
+  padding-right: 8px;
+  cursor: default;
 }
 
 p {
@@ -317,13 +495,13 @@ p {
 .footer {
   width: 100%;
   background: #f5f8fa;
-  margin-top: 35px;
+  margin-top: 50px;
   margin-bottom: 35px;
 }
 
 .icon-text-bold {
   font-weight: 800;
-  padding-bottom: 8px;
+  padding-bottom: 4px;
 }
 
 .icon-text {
@@ -408,6 +586,16 @@ p {
   background-image: url("pictures/heat.png");
 }
 
+.unga {
+  background-image: url("pictures/unga.jpg");
+  background-position: bottom;
+}
+
+.sf {
+  background-image: url("pictures/sf.jpg");
+  background-position: bottom;
+}
+
 .image {
   min-width: 100%;
   min-height: 100%;
@@ -425,11 +613,13 @@ p {
 
 .title-wrap-centered {
   text-align: center;
-  width: calc(100% - 40px);
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 90px;
-  margin-bottom: 90px;
+  width: calc(100% - 80px);
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  z-index: 10;
+  position: relative;
 }
 
 .title-wrap-centered > .paragraph {
@@ -448,6 +638,8 @@ p {
 }
 
 .header {
+  margin: auto;
+  width: 100%;
   line-height: 70px;
   max-width: 1400px;
   margin: auto;
@@ -525,6 +717,10 @@ body {
   .dissapear {
     display: inline-block;
   }
+
+  .features {
+    width: calc(100% - 100px);
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -543,6 +739,10 @@ body {
 
   .dissapear {
     display: none;
+  }
+
+  .features {
+    width: 100%;
   }
 }
 
@@ -572,9 +772,16 @@ h5 {
 
 h6 {
   margin: 0;
-  font-size: 17px;
+  font-size: 16px;
   font-family: 'Roboto Condensed', sans-serif;
-  font-weight: 600;
+  font-weight: 400;
+}
+
+.h7 {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .logo {
@@ -583,7 +790,7 @@ h6 {
   font-size: 30px;
   font-weight: 600;
   letter-spacing: 3px;
-
+  cursor: pointer;
 }
 
 .title-inner-test {
@@ -603,6 +810,11 @@ h6 {
   padding-right: 6px;
   border-bottom: 2px solid transparent;
   line-height: 18px;
+
+  &__hover:hover:after {
+    border-bottom: 2px solid;
+    width: 100%;
+  }
 }
 
 .title-menu-test:after {
@@ -613,11 +825,6 @@ h6 {
   position: relative;
   border-bottom: 2px solid transparent;
   transition: width .18s cubic-bezier(0,.15,.2,1) !important;
-}
-
-.title-menu-test:hover:after{
-  border-bottom: 2px solid;
-  width: 100%;
 }
 
 .selected:after {

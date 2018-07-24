@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 
-import Icon from './Icon';
-import Text from './Text';
-import BigImage from './BigImage';
-import TileText from './TileText';
-import Button from './Button';
+import Icon from '../Components/Icon';
+import Text from '../Components/Text';
+import BigImage from '../Components/BigImage';
+import TileText from '../Components/TileText';
+import Button from '../Components/Button';
 
 class Home extends Component {
   render() {
     return (
-     <span>
+     <div>
         <Text
-          title="IMPACT DRIVEN TECHNOLOGY"
+          title="Impact Driven Technology"
           text="We build software that integrate and analyze fragmented health information systems.<br />
             Our tools empower decision-makers to contextualize their data, catalyze meaningful breakthroughs in performance, and respond to national-scale humanitarian emergencies with unpredencented speed."
           big
@@ -19,7 +19,7 @@ class Home extends Component {
         <div className="maybe-center">
           <Button
             link="background.html"
-            text="CONTACT US"
+            text="GET IN TOUCH"
             fill
           />
           <Button
@@ -60,7 +60,7 @@ class Home extends Component {
         <div className="center">
           <Button
             link="background.html"
-            text="CONTACT US"
+            text="GET IN TOUCH"
             fill
           >
           </Button>
@@ -69,7 +69,7 @@ class Home extends Component {
             text="LEARN MORE"
           />
         </div>
-      </span>
+      </div>
     )
   }
 }

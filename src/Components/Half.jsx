@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import earth from './pictures/earth.jpg';
+import earth from '../pictures/earth.jpg';
 import Text from './Text';
 
-class Overlay extends Component {
+class Half extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -30,51 +30,49 @@ class Overlay extends Component {
 
 	renderImage(classes) {
 		return (
-			<div className={`pure-u-md-1-1 pure-u-lg-2-3 overlay-half-img ${classes}`}>
+			<div className={`pure-u-md-1-1 pure-u-lg-1-2 ${classes}`}>
 				<img className="pure-img" src={earth} alt="earth"/>
 			</div>
 		)
 	}
 
 	renderText(classes) {
-		const {title, text, reversed} = this.props;
+		const {title, text} = this.props;
 		return (
-			<div className={`pure-u-md-1-1 pure-u-lg-1-3 overlay-half-text
-					${classes} ${reversed ? 'overlay-half-text-reversed' : ''}`}>
-				<Text paragraphClass={'overlay-half-paragraph'} title={title} text={text} />
+			<div className={`pure-u-md-1-1 pure-u-lg-1-2 half-text ${classes}`}>
+				<Text shouldCenter title={title} text={text} />
 			</div>
 		)
 	}
 
 	renderContent() {
 		const { fullWidth } = this.state;
-
-		const fullClass = fullWidth ? 'half-full' : '';
-
+		const extraClass = fullWidth ? 'half-full' : '';
 		const {reversed} = this.props;
+
 		if (reversed && !fullWidth) {
 			return (
 				<div>
-					{this.renderText(`overlay-half-first ${fullClass}`)}
-					{this.renderImage(`overlay-half-second ${fullClass}`)}
+					{this.renderText(`half-first ${extraClass}`)}
+					{this.renderImage(`half-second ${extraClass}`)}
 				</div>
 			)
 		}
 		return (
 			<div>
-				{this.renderImage(`overlay-half-first ${fullClass}`)}
-				{this.renderText(`overlay-half-second ${fullClass}`)}
+				{this.renderImage(`half-first ${extraClass}`)}
+				{this.renderText(`half-second ${extraClass}`)}
 			</div>
 		)
 	}
 
 	render() {
 		return (
-			<div className="overlay-half">
+			<div className="pure-g half">
 				{this.renderContent()}
 			</div>
 		);
 	}
 }
 
-export default Overlay;
+export default Half;

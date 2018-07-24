@@ -1,20 +1,31 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Home from './Home';
-import Careers from './Careers';
-import Diversity from './Diversity';
-import Footer from './Footer';
+import Home from './Pages/Home';
+import About from './Pages/About';
+import Careers from './Pages/Careers';
+import Diversity from './Pages/Diversity';
+import Faq from './Pages/Faq';
+import Product from './Pages/Product';
+import Partnerships from './Pages/Partnerships';
 
-const pages = ["home", "government", "solution", "implementation", "careers", "diversity"];
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
+import Footer from './Components/Footer';
+
+const PAGES = ["product", "about", "work with us", "careers", "home"];
 
 class App extends Component {
   constructor(props) {
     super(props)
     const current = window.location.href.split("/").slice(-1)[0]
     this.state = {
-      currentPage: pages.indexOf(current) > -1 ? current : 'home'
+      // currentPage: pages.indexOf(current) > -1 ? current : 'home',
+      currentPage: current,
+      showLangDropdown: false,
     }
+
+    this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
@@ -44,32 +55,93 @@ class App extends Component {
   }
 
   handleChange(page) {
-    this.setState({currentPage: page});
-    window.history.pushState(null, null, page);
+    this.setState({currentPage: page.replace(/\s/g, '')});
+    window.history.pushState(null, null, page.replace(/\s/g, ''));
     window.scrollTo(0, 0);
+
+    document.getElementById('op').checked = false;
+    document.getElementById('nav-icon2').classList.remove('open');
+  }
+
+  handleLanguage() {
+    this.setState({
+      showLangDropdown: !this.state.showLangDropdown,
+    });
   }
 
   renderPages() {
-    return pages.map(page => (
-      <div className="title-inner-test" key={page}>
-        <div className="title-menu-test" onClick={this.handleChange.bind(this, page)}>
-          <h6 className="dissapear">{page}</h6>
+    return PAGES.map(page => {
+      if (page === 'language') {
+        if (this.state.showLangDropdown) {
+          return (
+            <div className="title-inner-test" key={page}>
+              <div className="title-menu-test language-dropdown" onClick={this.handleLanguage.bind(this)}>
+                <h6 className="dissapear language">en</h6>
+                <h6 className="dissapear language-option">fr</h6>
+              </div>
+            </div>
+          );
+        }
+        return (
+          <div className="title-inner-test" key={page}>
+            <div className="title-menu-test no-hover" onClick={this.handleLanguage.bind(this)}>
+              <h6 className="dissapear language">en</h6>
+            </div>
+          </div>
+        )
+      }
+      return (
+        <div className="dissapear title-inner-test" key={page}>
+          <div className="title-menu-test title-menu-test__hover" onClick={this.handleChange.bind(this, page)}>
+            <h6>{page.toUpperCase()}</h6>
+          </div>
         </div>
-      </div>
-      )
-    )
+      );
+    });
   }
 
-  renderCurrentPage() {
+  maybeRenderHome() {
     if (this.state.currentPage === 'home') {
-      return (<Home />);
+      return ( <Home /> );
     }
+  }
+
+  maybeRenderCareers() {
     if (this.state.currentPage === 'careers') {
-      return (<Careers />);
+      return ( <Careers /> );
     }
-    if (this.state.currentPage === 'diversity') {
-      return (<Diversity />);
+  }
+
+  maybeRenderAbout() {
+    if (this.state.currentPage === 'about') {
+      return ( <About handleChange={this.handleChange} /> );
     }
+  }
+
+  maybeRenderProduct() {
+    if (this.state.currentPage === 'product') {
+      return ( <Product /> );
+    }
+  }
+
+  maybeRenderPartnerships() {
+    if (this.state.currentPage === 'workwithus') {
+      return ( <Partnerships /> );
+    }
+  }
+
+  maybeRenderFaq() {
+    if (this.state.currentPage === 'faq') {
+      return ( <Faq /> );
+    }
+  }
+
+  renderFullMenu() {
+    return PAGES.slice().reverse().map(page => {
+      return (
+        <li><a className="menu" id={page.replace(/\s/g, '')} onClick={this.handleChange.bind(this, page)}>{page}</a></li>
+      );
+    });
   }
 
   render() {
@@ -94,23 +166,30 @@ class App extends Component {
           <label htmlFor="op"></label>
           <nav>
             <ul>
-              <li><a href="index.html" className="menu" id="home">HOME</a></li>
-              <li><a href="background.html" className="menu" id="product">GOVERNMENT</a></li>
-              <li><a href="solution.html" className="menu" id="capabilities">SOLUTION</a></li>
-              <li><a href="implementation.html" className="menu" id="implementation">IMPLEMENTATION</a></li>
-              <li><a href="careers.html" className="menu" id="careers">CAREERS</a></li>
+              {this.renderFullMenu()}
             </ul>
           </nav>
         </div>
         <div className="header-wrap" id="testEl">
           <div className="header">
-            <a className="logo" href="index.html">
+            <a className="logo" onClick={this.handleChange.bind(this, 'home')}>
               ZENYSIS
             </a>
             {this.renderPages()}
           </div>
         </div>
-        {this.renderCurrentPage()}
+        <ReactCSSTransitionGroup
+          transitionName="example"
+          transitionEnterTimeout={300}
+          transitionLeaveTimeout={10}
+        >
+          {this.maybeRenderHome()}
+          {this.maybeRenderCareers()}
+          {this.maybeRenderAbout()}
+          {this.maybeRenderFaq()}
+          {this.maybeRenderProduct()}
+          {this.maybeRenderPartnerships()}
+        </ReactCSSTransitionGroup>
         <Footer />
       </div>
     );
