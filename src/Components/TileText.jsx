@@ -5,10 +5,10 @@ class TileText extends Component {
 		const { title, text } = this.props;
 		return (
 			<div className="icon-text">
-        <div className="icon-text-bold">
+        <h5 className="icon-text-bold">
           {title}
-        </div>
-          {text}
+        </h5>
+				<h5>{text}</h5>
       </div>
 		);
 	}

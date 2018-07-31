@@ -55,6 +55,8 @@ class Product extends Component {
           link="Download our regulatory white paper"
           img={team}
         />
+        <Spacer />
+        <Spacer />
       </div>
     )
   }

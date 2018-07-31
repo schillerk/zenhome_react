@@ -8,6 +8,11 @@ class Diversity extends Component {
     return (
       <div>
         <Text
+          title="Diversity and Inclusion"
+          text="We have a long way to go."
+          big
+        />
+        <Text
           text="Dear All, It is very, very important that you login to Zenefits before EOD on Friday to proceed with open enrollment for dental and vision only. Disregard the medical option for now (the medical plan will be changed and that open enrollment for medical will occur in the next few weeks)."
           attribution="– Jonathan Stambolis, CEO"
           shouldCenter

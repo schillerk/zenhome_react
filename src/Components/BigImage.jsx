@@ -7,7 +7,7 @@ class BigImage extends Component {
 			<div className="image-wrap">
         <div className={`image ${img}`}></div>
         <div className="heat-text">
-          <span>{title}</span>
+          <h2>{title}</h2>
           <div className="heat-subtext">{text}</div>
         </div>
       </div>

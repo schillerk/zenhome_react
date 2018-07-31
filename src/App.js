@@ -13,7 +13,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import Footer from './Components/Footer';
 
-const PAGES = ["product", "about", "work with us", "careers", "home"];
+const PAGES = ["Product", "About", "Work With Us", "Careers", "Home"];
 
 class App extends Component {
   constructor(props) {
@@ -55,8 +55,8 @@ class App extends Component {
   }
 
   handleChange(page) {
-    this.setState({currentPage: page.replace(/\s/g, '')});
-    window.history.pushState(null, null, page.replace(/\s/g, ''));
+    this.setState({currentPage: page.replace(/\s/g, '').toLowerCase()});
+    window.history.pushState(null, null, page.replace(/\s/g, '').toLowerCase());
     window.scrollTo(0, 0);
 
     document.getElementById('op').checked = false;
@@ -93,7 +93,7 @@ class App extends Component {
       return (
         <div className="dissapear title-inner-test" key={page}>
           <div className="title-menu-test title-menu-test__hover" onClick={this.handleChange.bind(this, page)}>
-            <h6>{page.toUpperCase()}</h6>
+            <h6>{page}</h6>
           </div>
         </div>
       );
@@ -118,6 +118,12 @@ class App extends Component {
     }
   }
 
+  maybeRenderDiversity() {
+    if (this.state.currentPage === 'diversity') {
+      return ( <Diversity handleChange={this.handleChange} /> );
+    }
+  }
+
   maybeRenderProduct() {
     if (this.state.currentPage === 'product') {
       return ( <Product handleChange={this.handleChange} /> );
@@ -139,7 +145,7 @@ class App extends Component {
   renderFullMenu() {
     return PAGES.slice().reverse().map(page => {
       return (
-        <li><a className="menu" id={page.replace(/\s/g, '')} onClick={this.handleChange.bind(this, page)}>{page}</a></li>
+        <li><a className="menu" id={page.replace(/\s/g, '').toLowerCase()} onClick={this.handleChange.bind(this, page)}>{page}</a></li>
       );
     });
   }
@@ -191,6 +197,7 @@ class App extends Component {
           {this.maybeRenderFaq()}
           {this.maybeRenderProduct()}
           {this.maybeRenderPartnerships()}
+          {this.maybeRenderDiversity()}
         </ReactCSSTransitionGroup>
         <Footer />
       </div>

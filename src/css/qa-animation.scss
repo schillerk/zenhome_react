@@ -1,0 +1,51 @@
+@import "./variables.scss";
+
+/*https://stackoverflow.com/questions/38136077/how-to-morph-a-plus-sign-to-a-minus-sign-using-css-transition*/
+.qa-toggle {
+  color: red;
+}
+
+.qa-toggle {
+  color: $blackish;
+  width: 25px;
+  height: 25px;
+  border: 0;
+  font-size: 1.5em;
+  top: 3px;
+  position: relative;
+}
+
+.qa-toggle span {
+  position: absolute;
+  transition: .3s;
+  background: $blackish;
+  border-radius: 1px;
+}
+
+.qa-toggle span:first-of-type {
+  top: 6px;
+  bottom: 6px;
+  width: 3px;
+  left: 11px;
+}
+
+.qa-toggle span:last-of-type {
+  left: 6px;
+  right: 6px;
+  height: 3px;
+  top: 11px;
+}
+
+#plusminus {
+  display: none;
+}
+
+#plusminus:checked~.qa-toggle span:first-of-type,
+#plusminus:checked~.qa-toggle span:last-of-type {
+  transform: rotate(90deg);
+}
+
+#plusminus:checked~.qa-toggle span:last-of-type  {
+  left: 50%;
+  right: 50%;
+}

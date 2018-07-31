@@ -12,8 +12,8 @@ class Home extends Component {
      <div className="page">
         <Text
           title="Impact Driven Technology"
-          text="We build software that integrate and analyze fragmented health information systems.<br />
-            Our tools empower decision-makers to contextualize their data, catalyze meaningful breakthroughs in performance, and respond to national-scale humanitarian emergencies with unpredencented speed."
+          text="We build software to integrate and analyze fragmented information systems at a national scale.<br />
+            Our tools empower decision-makers to contextualize their data, catalyze meaningful breakthroughs in performance, and respond to humanitarian emergencies with unpredencented speed."
           big
         />
         <div className="maybe-center">
@@ -28,7 +28,7 @@ class Home extends Component {
           />
         </div>
         <BigImage
-          title="BRING DATA TO GLOBAL&nbsp;HEALTH"
+          title="Bring Data to Global&nbsp;Health"
           text="Uncover insights to catalyze major breakthroughs in health system performance."
           img="heat"
         ></BigImage>
