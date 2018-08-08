@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
 
-import ian from '../pictures/ian.jpg';
-import ellen from '../pictures/ellen.jpg';
-import pablo from '../pictures/pablo.jpg';
-import quentin from '../pictures/quentin.jpg';
-
 import Text from '../Components/Text';
 import Icon from '../Components/Icon';
 import TileText from '../Components/TileText';

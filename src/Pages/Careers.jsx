@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
 
-import stephen from '../pictures/stephen.jpg';
-import vinh from '../pictures/vinh.jpg';
-import nina from '../pictures/nina.jpg';
-import claire from '../pictures/claire.jpg';
-
 import team from '../pictures/team.jpg';
 import work from '../pictures/work.jpg';
 import chess from '../pictures/chess.jpg';
@@ -84,7 +79,9 @@ class Careers extends Component {
             shouldCenter
           />
         </span>
-        <div className="bebop-jobs"></div>
+        <div className="bebop-jobs-wrap">
+          <div className="bebop-jobs"></div>
+        </div>
       </div>
     )
   }

@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
 
-import form from '../pictures/form.png';
-import map from '../pictures/map2.png';
-import status from '../pictures/status2.png';
-import line from '../pictures/line.png';
-
 import BigImage from '../Components/BigImage';
 import Button from '../Components/Button';
 import Text from '../Components/Text';

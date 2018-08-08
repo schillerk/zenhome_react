@@ -93,12 +93,17 @@
   font-size: 22px;
 }
 
-.bebop-jobs {
+.bebop-jobs-wrap {
+  max-width: $width-limit;
+  padding-left: 100px;
+  padding-right: 100px;
   margin: auto;
+}
+
+.bebop-jobs {
   margin-bottom: 100px;
   z-index: 0;
   position: relative;
-  max-width: $width-limit;
   // It's hard to style this, so I turned it into a card
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   padding-top: 100px;
@@ -269,6 +274,7 @@
 .footer a {
   border-bottom: 1px solid transparent;
   transition: .1s;
+  cursor: pointer;
 }
 
 .footer a:hover {

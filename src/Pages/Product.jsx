@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 import form from '../pictures/form.png';
-import map from '../pictures/map2.png';
+import map from '../pictures/map2.jpg';
 import status from '../pictures/status2.png';
-import line from '../pictures/line.png';
+import line from '../pictures/line.jpg';
 
 import Text from '../Components/Text';
 import Overlay from '../Components/Overlay';

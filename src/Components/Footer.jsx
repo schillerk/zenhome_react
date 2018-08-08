@@ -8,23 +8,22 @@ class Footer extends Component {
           <div className="pure-g footer-inner">
             <div className="pure-u-1 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-4">
               <div className="footer-col-text">
-                Company
+                Zenysis
                 <div className="footer-col-links">
-                  <p><a href="https://www.linkedin.com/company/zenysis-technologies/">About</a></p>
-                  <p><a href="https://www.linkedin.com/company/zenysis-technologies/">Careers</a></p>
-                  <p><a href="https://www.linkedin.com/company/zenysis-technologies/">Diversity and Inclusion</a></p>
-                  <p><a href="https://www.linkedin.com/company/zenysis-technologies/">Open Roles</a></p>
-                  <p><a href="https://www.linkedin.com/company/zenysis-technologies/">Internships</a></p>
+                  <p><a onClick={this.props.handleChange.bind(this, 'home')}>Home</a></p>
+                  <p><a onClick={this.props.handleChange.bind(this, 'about')}>About</a></p>
+                  <p><a onClick={this.props.handleChange.bind(this, 'careers')}>Careers</a></p>
+                  <p><a onClick={this.props.handleChange.bind(this, 'product')}>Product</a></p>
                 </div>
               </div>
             </div>
             <div className="pure-u-1 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-4">
               <div className="footer-col-text">
-                Work With Us
+                Open Roles
                 <div className="footer-col-links">
-                  <p><a href="https://www.linkedin.com/company/zenysis-technologies/">Work with Us</a></p>
-                  <p><a href="https://www.linkedin.com/company/zenysis-technologies/">Case Studies</a></p>
-                  <p><a href="https://www.linkedin.com/company/zenysis-technologies/">FAQ</a></p>
+                  <p><a href="https://hire.withgoogle.com/public/jobs/zenysiscom/view/P_AAAAAACAAADG6zVIjR4eVM">Country Director</a></p>
+                  <p><a href="https://hire.withgoogle.com/public/jobs/zenysiscom/view/P_AAAAAACAAADF-WHmhdY5_Z">Software Engineer</a></p>
+                  <p><a href="https://hire.withgoogle.com/public/jobs/zenysiscom/view/P_AAAAAACAAADD5NEnmc9PIn">Senior Software Engineer</a></p>
                 </div>
               </div>
             </div>
@@ -32,11 +31,10 @@ class Footer extends Component {
               <div className="footer-col-text">
                 Products
                 <div className="footer-col-links">
-                  <p><a href="https://www.linkedin.com/company/zenysis-technologies/">Integrations</a></p>
-                  <p><a href="https://www.linkedin.com/company/zenysis-technologies/">Analytics</a></p>
-                  <p><a href="https://www.linkedin.com/company/zenysis-technologies/">Data Quality</a></p>
-                  <p><a href="https://www.linkedin.com/company/zenysis-technologies/">Artificial Intelligence</a></p>
-                  <p><a href="https://www.linkedin.com/company/zenysis-technologies/">Privacy, Security and Compliance</a></p>
+                  <p><a onClick={this.props.handleChange.bind(this, 'product')}>Analytics</a></p>
+                  <p><a onClick={this.props.handleChange.bind(this, 'product')}>Integrations</a></p>
+                  <p><a onClick={this.props.handleChange.bind(this, 'product')}>Artificial Intelligence</a></p>
+                  <p><a onClick={this.props.handleChange.bind(this, 'product')}>Data Quality</a></p>
                 </div>
               </div>
             </div>

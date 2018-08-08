@@ -5,7 +5,7 @@ class Icon extends Component {
 		const { img } = this.props;
 		return (
 			<div className="icon-wrap">
-        <i class={`icon anticon icon-${img}`}></i>
+        <i className={`icon anticon icon-${img}`}></i>
       </div>
 		)
 	}

@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 
 import Text from '../Components/Text';
-import Icon from '../Components/Icon';
-import TileText from '../Components/TileText';
-import Button from '../Components/Button';
-import Spacer from '../Components/Spacer'
 import BigImage from '../Components/BigImage';
 import Question from '../Components/Question';
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Button extends Component {
 	render() {
-		const { link, extraClass, text, fill, onClick } = this.props;
+		const { extraClass, text, fill, onClick } = this.props;
 		return (
 			<div onClick={onClick} className={`btn ${fill ? 'btn-fill' : ''} ${extraClass}`}>
 				{text}
