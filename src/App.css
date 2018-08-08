@@ -1,6 +1,7 @@
 @import url(./css/menu-animation.css);
 /*https://stackoverflow.com/questions/38136077/how-to-morph-a-plus-sign-to-a-minus-sign-using-css-transition*/
 @import url(./css/page-animation.css);
+@import url(./antdiconfont/iconfont.css);
 .qa-toggle {
   color: red; }
 
@@ -459,21 +460,6 @@ p {
       width: calc(100% - 160px);
       display: inline-block; } }
 
-.icon-container2 {
-  position: relative;
-  margin-right: 30px;
-  margin-left: 30px;
-  display: inline-block;
-  margin-bottom: 50px; }
-
-.icon-container {
-  position: relative;
-  width: 300px;
-  margin-right: 48px;
-  margin-left: 48px;
-  display: inline-block;
-  margin-bottom: 50px; }
-
 .icon-wrap {
   display: inline-block;
   background: #6a71b9;
@@ -481,7 +467,8 @@ p {
   width: 60px;
   border-radius: 100%;
   margin-left: 30px;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  text-align: center; }
   @media (max-width: 1024px) {
     .icon-wrap {
       position: relative;
@@ -489,36 +476,9 @@ p {
       transform: translateY(90px); } }
 
 .icon {
-  transform: scale(0.073);
-  position: relative; }
-
-.careers {
-  background-image: url("pictures/careers.png");
-  height: 420px;
-  width: 420px;
-  bottom: 179px;
-  right: 181px; }
-
-.integrations {
-  background-image: url("pictures/integrations.png");
-  height: 420px;
-  width: 420px;
-  bottom: 179px;
-  right: 181px; }
-
-.analytics {
-  background-image: url("pictures/analytics.png");
-  height: 400px;
-  width: 400px;
-  bottom: 170px;
-  right: 169px; }
-
-.teams {
-  background-image: url("pictures/teams.png");
-  height: 460px;
-  width: 460px;
-  bottom: 200px;
-  right: 201px; }
+  color: white;
+  font-size: 24px;
+  line-height: 60px; }
 
 .image-wrap {
   margin-top: 30px;
@@ -531,7 +491,7 @@ p {
   position: relative; }
 
 .heat {
-  background-image: url("pictures/heat.png"); }
+  background-image: url("pictures/heat.jpg"); }
 
 .unga {
   background-image: url("pictures/unga.jpg");

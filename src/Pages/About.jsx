@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
 
-import jess from '../pictures/jess.png'
-import chandra from '../pictures/chandra.png'
-import jaime from '../pictures/jaime.png'
-import doug from '../pictures/doug.png'
-
 import ian from '../pictures/ian.jpg';
 import ellen from '../pictures/ellen.jpg';
 import pablo from '../pictures/pablo.jpg';
@@ -50,21 +45,21 @@ class About extends Component {
         <div className="features">
           <div className="pure-g">
             <div className="feature-col pure-u-lg-1-3">
-              <Icon img="integrations" />
+              <Icon img="tool" />
               <TileText
                 title="Product Excellence"
                 text="We understand that addressing user needs requires more than building a tool. Intuitive interfaces and top-tier user research are necessities, not nice to haves."
               />
             </div>
             <div className="feature-col pure-u-lg-1-3">
-              <Icon img="analytics" />
+              <Icon img="dotchart" />
               <TileText
                 title="Technology for Human Empowerment"
                 text="Our visualization and transformation tools leverage time-series, geospatial and statistical insights to enable flexible analysis for any type of problem."
               />
             </div>
             <div className="feature-col pure-u-lg-1-3">
-              <Icon img="teams" />
+              <Icon img="find" />
               <TileText
                 title="Mission Motivated"
                 text="We invest seriously in building sustainable capacity at every stage of implementation, and always scope deployments with the long term goal of full local ownership."
@@ -81,21 +76,21 @@ class About extends Component {
         <div className="features">
           <div className="pure-g">
             <div className="feature-col pure-u-lg-1-3">
-              <Icon img="integrations" />
+              <Icon img="link" />
               <TileText
                 title="Cross-Functionality"
                 text="Our project managers have technical backgrounds and our engineers work directly with clients. Roles aren’t narrowly defined, and ownership is always expansive."
               />
             </div>
             <div className="feature-col pure-u-lg-1-3">
-              <Icon img="analytics" />
+              <Icon img="codesquareo" />
               <TileText
                 title="Technical Leadership"
                 text="We see code as a means to an end, but that doesn’t mean neglecting systems architecture or R&D. We’re at the forefront of our technical domains, and invest seriously in internal infrastructure and tooling."
               />
             </div>
             <div className="feature-col pure-u-lg-1-3">
-              <Icon img="teams" />
+              <Icon img="medicinebox" />
               <TileText
                 title="Domain Expertise"
                 text="Since the problems we tackle extend far beyond the digital realm, we've brought on advisors, leaders and partner organizations with decades of experience thinking through everything from logistics to epidemiology."
@@ -112,21 +107,21 @@ class About extends Component {
         <div className="features">
           <div className="pure-g">
             <div className="feature-col pure-u-lg-1-3">
-              <Icon img="teams" />
+              <Icon img="earth" />
               <TileText
                 title="Diversity and Inclusion"
                 text="As a global company working with vulnerable populations, diversity of identity and experience is both a business and moral imperative. We have a long way to go, but we’re working to get there."
               />
             </div>
             <div className="feature-col pure-u-lg-1-3">
-              <Icon img="analytics" />
+              <Icon img="home" />
               <TileText
                 title="Lives Outside the Office"
                 text="We don’t use “passion” as code for “80 hour work week”. Because we’re building a company for long-term impact, we’ve chosen to be proactive about ensuring a healthy work/life balance."
               />
             </div>
             <div className="feature-col pure-u-lg-1-3">
-              <Icon img="integrations" />
+              <Icon img="rest" />
               <TileText
                 title="Sensible Indulgence"
                 text="We don’t have bean bags, ping pong or beer on tap, but offer top-line health coverage, noise canceling headphones, and whatever else is essential to doing your best job."

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import team from '../pictures/productivity-startup-team.jpg';
 import form from '../pictures/form.png';
 import map from '../pictures/map2.png';
 import status from '../pictures/status2.png';

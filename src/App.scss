@@ -3,6 +3,7 @@
 // @import "./css/gh-pages.css";
 @import "./css/qa-animation.scss";
 @import "./css/page-animation.css";
+@import "./antdiconfont/iconfont.css";
 
 #ian {
   background-image: url("pictures/ian.jpg");
@@ -508,23 +509,6 @@ p {
   }
 }
 
-.icon-container2 {
-  position: relative;
-  margin-right: 30px;
-  margin-left: 30px;
-  display: inline-block;
-  margin-bottom: 50px;
-}
-
-.icon-container {
-  position: relative;
-  width: 300px;
-  margin-right: 48px;
-  margin-left: 48px;
-  display: inline-block;
-  margin-bottom: 50px;
-}
-
 .icon-wrap {
   display: inline-block;
   background: $primary;
@@ -533,6 +517,7 @@ p {
   border-radius: 100%;
   margin-left: $space-s;
   box-shadow: 0px 3px 6px rgba(0,0,0,.2);
+  text-align: center;
   @media (max-width: $break-l) {
     position: relative;
     bottom: 100%;
@@ -541,40 +526,9 @@ p {
 }
 
 .icon {
-  transform: scale(.073);
-  position: relative;
-}
-
-.careers {
-  background-image: url('pictures/careers.png');
-  height: 420px;
-  width: 420px;
-  bottom: 179px;
-  right: 181px;
-}
-
-.integrations {
-  background-image: url('pictures/integrations.png');
-  height: 420px;
-  width: 420px;
-  bottom: 179px;
-  right: 181px;
-}
-
-.analytics {
-  background-image: url('pictures/analytics.png');
-  height: 400px;
-  width: 400px;
-  bottom: 170px;
-  right: 169px;
-}
-
-.teams {
-  background-image: url('pictures/teams.png');
-  height: 460px;
-  width: 460px;
-  bottom: 200px;
-  right: 201px;
+  color: white;
+  font-size: 24px;
+  line-height: 60px;
 }
 
 .image-wrap {
@@ -589,7 +543,7 @@ p {
 }
 
 .heat {
-  background-image: url("pictures/heat.png");
+  background-image: url("pictures/heat.jpg");
 }
 
 .unga {

@@ -35,7 +35,7 @@ class Home extends Component {
         <div className="features">
           <div className="pure-g">
             <div className="feature-col pure-u-lg-1-3">
-              <Icon img="careers" />
+              <Icon img="addusergroup" />
               <TileText
                 title="Careers at Zenysis"
                 text="Since roles are scoped by project ownership, you’ll have the chance and obligation to take responsibility for the impact of your work."
@@ -44,7 +44,7 @@ class Home extends Component {
               />
             </div>
             <div className="feature-col pure-u-lg-1-3">
-              <Icon img="analytics" />
+              <Icon img="hearto" />
               <TileText
                 title="Our Culture and Values"
                 text="We're commited to helping the world’s most vulnerable populations in areas with opportunities for outsized systems-level change."
@@ -53,7 +53,7 @@ class Home extends Component {
               />
             </div>
             <div className="feature-col pure-u-lg-1-3">
-              <Icon img="teams" />
+              <Icon img="API" />
               <TileText
                 title="Platform Capabilities"
                 text="Our products serve as the interoperability layer for all existing data, not the next competing standard."
