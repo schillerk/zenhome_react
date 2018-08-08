@@ -1,6 +1,6 @@
 @import "./css/variables.scss";
 @import "./css/menu-animation.css";
-// @import "./css/gh-pages.css";
+@import "./css/gh-pages.css";
 @import "./css/qa-animation.scss";
 @import "./css/page-animation.css";
 @import "./antdiconfont/iconfont.css";
@@ -48,6 +48,9 @@
 
 .open-roles {
   top: 190px;
+  @media (max-width: $break-m) {
+    top: 220px;
+  }
   position: relative;
 }
 
@@ -95,9 +98,11 @@
 
 .bebop-jobs-wrap {
   max-width: $width-limit;
-  padding-left: 100px;
-  padding-right: 100px;
-  margin: auto;
+  @media (min-width: $break-m) {
+    padding-left: 100px;
+    padding-right: 100px;
+    margin: auto;
+  }
 }
 
 .bebop-jobs {
@@ -106,7 +111,12 @@
   position: relative;
   // It's hard to style this, so I turned it into a card
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  padding-top: 100px;
+  @media (max-width: $break-m) {
+    padding-top: 180px;
+  }
+  @media (min-width: $break-m) {
+    padding-top: 100px;
+  }
   background: white;
 }
 
@@ -828,17 +838,3 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
-// .page {
-//   position: relative;
-//   top: 50px;
-// }
-
-// .footer {
-//   margin-top: 100px;
-// }
-
-// .legal-inner {
-//   position: relative;
-//   top: -21px;
-// }

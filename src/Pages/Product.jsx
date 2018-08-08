@@ -52,7 +52,7 @@ class Product extends Component {
           img={team}
         />*/}
         <Text
-          title="Create the Next Generation of our Platform"
+          title="Create the Next Generation of Our Platform"
           text="Come build products, relationships and tools to transform the next decade of development."
           shouldCenter
         />

@@ -28,17 +28,8 @@ class App extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  updatePage() {
-    console.log('updating');
-    const current = window.location.href.split("/").slice(-1)[0]
-    this.setState({
-      currentPage: current,
-    });
-  }
-
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
-    window.addEventListener("hashchange", this.updatePage);
 
     document.addEventListener("DOMContentLoaded", function(){
       var el = document.getElementById('nav-icon2')
@@ -49,7 +40,6 @@ class App extends Component {
   }
 
   handleScroll (event) {
-    console.log('scroll');
     var nav = document.getElementById('testEl');
     if ( window.pageYOffset > 30 ) {
         nav.classList.add("testElClass1");
