@@ -11,20 +11,20 @@ class Home extends Component {
     return (
      <div className="page">
         <Text
-          title="Impact Driven Technology"
+          title="Impact-Driven Technology"
           text="We build software to integrate and analyze fragmented information systems at a national scale.<br />
-            Our tools empower decision-makers to contextualize their data, catalyze meaningful breakthroughs in performance, and respond to humanitarian emergencies with unpredencented speed."
+            Our tools allow decision-makers to contextualize their data, catalyze meaningful breakthroughs in performance, and respond to humanitarian emergencies with unpredencented speed."
           big
         />
         <div className="maybe-center">
           <Button
-            onClick={this.props.handleChange.bind(this, 'workwithus')}
-            text="GET IN TOUCH"
+            onClick={this.props.handleChange.bind(this, 'about')}
+            text="LEARN MORE"
             fill
           />
           <Button
-            onClick={this.props.handleChange.bind(this, 'about')}
-            text="LEARN MORE"
+            onClick={this.props.handleChange.bind(this, 'careers')}
+            text="JOIN THE TEAM"
           />
         </div>
         <BigImage
@@ -35,38 +35,44 @@ class Home extends Component {
         <div className="features">
           <div className="pure-g">
             <div className="feature-col pure-u-lg-1-3">
-              <Icon img="integrations" />
+              <Icon img="careers" />
               <TileText
-                title="Custom Integrations"
-                text="Our engineers work on a case-by-case basis to integrate data from existing health information systems into a unified view of an entire nation's health sector."
+                title="Careers at Zenysis"
+                text="Since roles are scoped by project ownership, you’ll have the chance and obligation to take responsibility for the impact of your work."
+                link="See open roles."
+                onClick={this.props.handleChange.bind(this, 'careers')}
               />
             </div>
             <div className="feature-col pure-u-lg-1-3">
               <Icon img="analytics" />
               <TileText
-                title="Powerful Analytics"
-                text="Our visualization and transformation tools levelrage time-series, geospatial and statistical insights to empower health analysts."
+                title="Our Culture and Values"
+                text="We're commited to helping the world’s most vulnerable populations in areas with opportunities for outsized systems-level change."
+                link="Read about our mission."
+                onClick={this.props.handleChange.bind(this, 'about')}
               />
             </div>
             <div className="feature-col pure-u-lg-1-3">
               <Icon img="teams" />
               <TileText
-                title="Embedded Teams"
-                text="We invest seriously in building sustainable capacity at every stage of implementation, and always scope deployments with the long-term goal of full local ownership."
+                title="Platform Capabilities"
+                text="Our products serve as the interoperability layer for all existing data, not the next competing standard."
+                link="Explore our features."
+                onClick={this.props.handleChange.bind(this, 'product')}
               />
             </div>
           </div>
         </div>
         <div className="center">
           <Button
-            onClick={this.props.handleChange.bind(this, 'workwithus')}
-            text="GET IN TOUCH"
+            onClick={this.props.handleChange.bind(this, 'about')}
+            text="LEARN MORE"
             fill
           >
           </Button>
           <Button
-            onClick={this.props.handleChange.bind(this, 'about')}
-            text="LEARN MORE"
+            onClick={this.props.handleChange.bind(this, 'careers')}
+            text="JOIN THE TEAM"
           />
         </div>
       </div>

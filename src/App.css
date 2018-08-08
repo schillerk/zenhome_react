@@ -1,5 +1,4 @@
 @import url(./css/menu-animation.css);
-@import url(./css/gh-pages.css);
 /*https://stackoverflow.com/questions/38136077/how-to-morph-a-plus-sign-to-a-minus-sign-using-css-transition*/
 @import url(./css/page-animation.css);
 .qa-toggle {
@@ -43,9 +42,51 @@
   left: 50%;
   right: 50%; }
 
+#ian {
+  background-image: url("pictures/ian.jpg");
+  background-position: left 30% top; }
+
+#ellen {
+  background-image: url("pictures/ellen.jpg");
+  background-position: left 40% top; }
+
+#pablo {
+  background-image: url("pictures/pablo.jpg");
+  background-position: left 40% top; }
+
+#quentin {
+  background-image: url("pictures/quentin.jpg");
+  background-position: left 40% top; }
+
+#claire {
+  background-image: url("pictures/claire.jpg");
+  background-position: left 40% top; }
+
+#vinh {
+  background-image: url("pictures/vinh.jpg");
+  background-position: left 65% top; }
+
+#stephen {
+  background-image: url("pictures/stephen.jpg");
+  background-position: left 55% top; }
+
+#nina {
+  background-image: url("pictures/nina.jpg");
+  background-position: left 60% top; }
+
+.portrait {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center top; }
+
 .open-roles {
   top: 190px;
   position: relative; }
+
+.images .pure-u-lg-1-4 {
+  height: 300px !important; }
 
 * {
   white-space: pre-line;
@@ -451,6 +492,13 @@ p {
   transform: scale(0.073);
   position: relative; }
 
+.careers {
+  background-image: url("pictures/careers.png");
+  height: 420px;
+  width: 420px;
+  bottom: 179px;
+  right: 181px; }
+
 .integrations {
   background-image: url("pictures/integrations.png");
   height: 420px;
@@ -582,14 +630,7 @@ body {
     width: 0;
     margin: auto;
     border-bottom: 2px solid transparent;
-    transition: width 0.3s cubic-bezier(0, 0.15, 0.25, 1) !important; }
-  .menu:hover {
-    color: #F5F8FA !important;
-    transition: color 0.3s cubic-bezier(0, 0.15, 0.25, 1); }
-  .menu:hover:after {
-    border-bottom: 2px solid #F5F8FA;
-    width: 100%;
-    position: relative; } }
+    transition: width 0.3s cubic-bezier(0, 0.15, 0.25, 1) !important; } }
 
 @media (min-width: 768px) {
   #op:checked ~ .overlay-hugeinc {

@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 
-import jess from '../pictures/jess.png'
-import chandra from '../pictures/chandra.png'
-import jaime from '../pictures/jaime.png'
-import doug from '../pictures/doug.png'
-import team from '../pictures/productivity-startup-team.jpg';
+import stephen from '../pictures/stephen.jpg';
+import vinh from '../pictures/vinh.jpg';
+import nina from '../pictures/nina.jpg';
+import claire from '../pictures/claire.jpg';
+
+import team from '../pictures/team.jpg';
+import work from '../pictures/work.jpg';
+import chess from '../pictures/chess.jpg';
 
 import Text from '../Components/Text';
 import Overlay from '../Components/Overlay';
@@ -29,51 +32,51 @@ class Careers extends Component {
      <div className="page">
         <Text
           title="Careers at Zenysis"
-          text="We've made extraordinary progress in our first year: our software is already helping governments meet the challenge of providing lifesaving healthcare to more than 100 million people.<br />
-          Now we're looking for exceptional people who can help us reach the next billion and beyond."
+          text="Since 2016, our software has empowered governments around the world to provide lifesaving healthcare, upgrade infrastructure, and track everything from malaria outbreaks to trends in maternal health.<br />
+          In our first couple years, we've already reached populations over 100 million, help us reach the next billion and beyond."
           big
         />
         <div className="maybe-center">
           <Button text="OPEN ROLES" fill onClick={() => {
             document.querySelector('.open-roles').scrollIntoView({ behavior: 'smooth' });
-;
           }} />
         </div>
         <div className="images">
           <div className="pure-g">
-            <div className="pure-u-md-1-2 pure-u-lg-1-4">
-              <img className="pure-img" src={jess} alt='img'/>
+            <div className="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+              <div id="nina" className="portrait" alt='img'/>
             </div>
-            <div className="pure-u-md-1-2 pure-u-lg-1-4">
-              <img className="pure-img" src={chandra} alt='img'/>
+            <div className="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+              <div id="vinh" className="portrait" alt='img'/>
             </div>
-            <div className="pure-u-md-1-2 pure-u-lg-1-4">
-              <img className="pure-img" src={jaime} alt='img'/>
+            <div className="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+              <div id="claire" className="portrait" alt='img'/>
             </div>
-            <div className="pure-u-md-1-2 pure-u-lg-1-4">
-              <img className="pure-img" src={doug} alt='img'/>
+            <div className="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+              <div id="stephen" className="portrait" alt='img'/>
             </div>
           </div>
         </div>
         <Overlay
           title="Engineering Excellence"
-          text="Product specs never survive contact with the real world, but we can still be rigorous about ensuring that our systems fail sensibly, with appropriate documentation, and in isolated test environments. We build solutions to the world’s messiest problems, and embrace complexity at every step."
-          img={team}
+          text="We build solutions to the world’s messiest problems, and embrace complexity at every step. When systems falter, we're rigorous about ensuring that they fail sensibly, with appropriate documentation, and in isolated test environments."
+          reversed
+          img={work}
+        />
+        <Spacer />
+        <Overlay
+          title="Business Strategy and Partnerships"
+          text="In order to create lasting good, we’re equally dedicated to developing the long-term operational capacity required to succeed at scale."
+          img={chess}
         />
         <Spacer />
         <Overlay
           title="Human-Centred Product Design"
-          text="Our product development is most effective at the intersection of users’ needs and technological innovation. We strive to understand our user’s most pressing needs, while pushing them to engage with possibilities far outside their realm of comfort and experience."
+          text="Our product development is most effective at the intersection of user needs and technological innovation. We strive for understanding, but push clients to engage with possibilities outside their realm of experience."
           reversed
           img={team}
         />
-        <Spacer />
-        <Overlay
-          title="Sustainable Business Development"
-          text="Our mission is altruistic at its core, but our plan for getting there is ruthlessly pragmatic. In order to create lasting good, we’re equally dedicated to developing the long-term strategic and operational capacity required to succeed at scale."
-          img={team}
-        />
-        <Spacer anti />
+        <Spacer margin='-170px' />
         <span className="open-roles">
           <Text
             title="Open Roles"

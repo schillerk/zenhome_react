@@ -1,5 +1,5 @@
 /*Special GH Pages styles, disable for development*/
-/*.page {
+.page {
   position: relative;
   top: 50px;
 }
@@ -10,6 +10,5 @@
 
 .legal-inner {
   position: relative;
-  top: -20px;
+  top: -21px;
 }
-*/

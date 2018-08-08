@@ -1,12 +1,58 @@
 @import "./css/variables.scss";
 @import "./css/menu-animation.css";
-@import "./css/gh-pages.css";
+// @import "./css/gh-pages.css";
 @import "./css/qa-animation.scss";
 @import "./css/page-animation.css";
+
+#ian {
+  background-image: url("pictures/ian.jpg");
+  background-position: left 30% top;
+}
+#ellen {
+  background-image: url("pictures/ellen.jpg");
+  background-position: left 40% top;
+}
+#pablo {
+  background-image: url("pictures/pablo.jpg");
+  background-position: left 40% top;
+}
+#quentin {
+  background-image: url("pictures/quentin.jpg");
+  background-position: left 40% top;
+}
+#claire {
+  background-image: url("pictures/claire.jpg");
+  background-position: left 40% top;
+}
+#vinh {
+  background-image: url("pictures/vinh.jpg");
+  background-position: left 65% top;
+}
+#stephen {
+  background-image: url("pictures/stephen.jpg");
+  background-position: left 55% top;
+}
+#nina {
+  background-image: url("pictures/nina.jpg");
+  background-position: left 60% top;
+}
+
+.portrait {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center top;
+}
 
 .open-roles {
   top: 190px;
   position: relative;
+}
+
+.images .pure-u-lg-1-4 {
+  // $max-width / 4
+  height: 300px !important;
 }
 
 * {
@@ -499,6 +545,14 @@ p {
   position: relative;
 }
 
+.careers {
+  background-image: url('pictures/careers.png');
+  height: 420px;
+  width: 420px;
+  bottom: 179px;
+  right: 181px;
+}
+
 .integrations {
   background-image: url('pictures/integrations.png');
   height: 420px;
@@ -647,16 +701,16 @@ body {
     transition: width .3s cubic-bezier(0,.15,.25,1) !important;
   }
 
-  .menu:hover {
-    color: #F5F8FA !important;
-    transition: color .3s cubic-bezier(0,.15,.25,1);
-  }
+  // .menu:hover {
+  //   color: #F5F8FA !important;
+  //   transition: color .3s cubic-bezier(0,.15,.25,1);
+  // }
 
-  .menu:hover:after{
-    border-bottom: 2px solid #F5F8FA;
-    width: 100%;
-    position: relative;
-  }
+  // .menu:hover:after{
+  //   border-bottom: 2px solid #F5F8FA;
+  //   width: 100%;
+  //   position: relative;
+  // }
 }
 
 @media (min-width: $break-m) {
@@ -814,3 +868,17 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+// .page {
+//   position: relative;
+//   top: 50px;
+// }
+
+// .footer {
+//   margin-top: 100px;
+// }
+
+// .legal-inner {
+//   position: relative;
+//   top: -21px;
+// }

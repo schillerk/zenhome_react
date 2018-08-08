@@ -1,8 +1,20 @@
 import React, { Component } from 'react';
 
 class Text extends Component {
+  maybeRenderLink() {
+    const { link } = this.props;
+    if (link) {
+      return (
+        <span>
+          <br />
+          <div className="h7">{link}</div>
+        </span>
+      );
+    }
+  }
+
 	render() {
-    const { title, text, link, attribution, paragraphClass, big, small } = this.props;
+    const { title, text, attribution, paragraphClass, big, small } = this.props;
 		return this.props.shouldCenter ? (
 	    <div className="title-wrap-centered">
         {big ? <h1 className="big-title">{title}</h1> :
@@ -18,8 +30,7 @@ class Text extends Component {
         <h5 className={`${paragraphClass ? paragraphClass : 'paragraph'}`}>
           {text.replace('<br />', "\u000A\u000A")}
         </h5>
-        <br />
-        <div className="h7">{link}</div>
+        {this.maybeRenderLink()}
       </div>
     )
 	}

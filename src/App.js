@@ -13,7 +13,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import Footer from './Components/Footer';
 
-const PAGES = ["Product", "About", "Work With Us", "Careers", "Home"];
+const PAGES = ["Product", "About", "Careers", "Home"];
 
 class App extends Component {
   constructor(props) {
@@ -71,6 +71,7 @@ class App extends Component {
 
   renderPages() {
     return PAGES.map(page => {
+      const selectedClass = this.state.currentPage == page.toLowerCase() ? 'selected' : '';
       if (page === 'language') {
         if (this.state.showLangDropdown) {
           return (
@@ -92,7 +93,10 @@ class App extends Component {
       }
       return (
         <div className="dissapear title-inner-test" key={page}>
-          <div className="title-menu-test title-menu-test__hover" onClick={this.handleChange.bind(this, page)}>
+          <div
+            className={`title-menu-test title-menu-test__hover ${selectedClass}`}
+            onClick={this.handleChange.bind(this, page)}
+          >
             <h6>{page}</h6>
           </div>
         </div>
@@ -145,7 +149,7 @@ class App extends Component {
   renderFullMenu() {
     return PAGES.slice().reverse().map(page => {
       return (
-        <li><a className="menu" id={page.replace(/\s/g, '').toLowerCase()} onClick={this.handleChange.bind(this, page)}>{page}</a></li>
+        <li key={page}><a className="menu" id={page.replace(/\s/g, '').toLowerCase()} onClick={this.handleChange.bind(this, page)}>{page}</a></li>
       );
     });
   }
@@ -194,10 +198,10 @@ class App extends Component {
           {this.maybeRenderHome()}
           {this.maybeRenderCareers()}
           {this.maybeRenderAbout()}
-          {this.maybeRenderFaq()}
           {this.maybeRenderProduct()}
+{/*          {this.maybeRenderFaq()}
           {this.maybeRenderPartnerships()}
-          {this.maybeRenderDiversity()}
+          {this.maybeRenderDiversity()}*/}
         </ReactCSSTransitionGroup>
         <Footer />
       </div>

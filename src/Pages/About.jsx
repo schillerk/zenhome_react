@@ -6,10 +6,9 @@ import jaime from '../pictures/jaime.png'
 import doug from '../pictures/doug.png'
 
 import ian from '../pictures/ian.jpg';
-import nina from '../pictures/nina.jpg';
+import ellen from '../pictures/ellen.jpg';
+import pablo from '../pictures/pablo.jpg';
 import quentin from '../pictures/quentin.jpg';
-import claire from '../pictures/claire.jpg';
-
 
 import Text from '../Components/Text';
 import Icon from '../Components/Icon';
@@ -29,23 +28,23 @@ class About extends Component {
         />
         <div className="images">
           <div className="pure-g">
-            <div className="pure-u-md-1-2 pure-u-lg-1-4">
-              <img className="pure-img" src={ian} alt='img'/>
+            <div className="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-4">
+              <div id="ian" className="portrait" alt='img'/>
             </div>
-            <div className="pure-u-md-1-2 pure-u-lg-1-4">
-              <img className="pure-img" src={claire} alt='img'/>
+            <div className="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-4">
+              <div id="ellen" className="portrait" alt='img'/>
             </div>
-            <div className="pure-u-md-1-2 pure-u-lg-1-4">
-              <img className="pure-img" src={nina} alt='img'/>
+            <div className="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-4">
+              <div id="pablo" className="portrait" alt='img'/>
             </div>
-            <div className="pure-u-md-1-2 pure-u-lg-1-4">
-              <img className="pure-img" src={quentin} alt='img'/>
+            <div className="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-4">
+              <div id="quentin" className="portrait" alt='img'/>
             </div>
           </div>
         </div>
         <Text
           title="Impact Focused From Design to Execution"
-          text="Solving the hardest problems requires thinking across domains ranging from engineering to economic development, and excelling in all of them."
+          text="We don’t launch projects for their own sake, or build features just to show off. Self-evaluation is at the heart of everything we do."
           shouldCenter
         />
         <div className="features">
@@ -54,21 +53,21 @@ class About extends Component {
               <Icon img="integrations" />
               <TileText
                 title="Product Excellence"
-                text="We understand that empowering users requires more than putting a tool in their hands, and see building intuitive interfaces and top-tier user experience as a necessity, not a nice to have."
+                text="We understand that addressing user needs requires more than building a tool. Intuitive interfaces and top-tier user research are necessities, not nice to haves."
               />
             </div>
             <div className="feature-col pure-u-lg-1-3">
               <Icon img="analytics" />
               <TileText
                 title="Technology for Human Empowerment"
-                text="Our visualization and transformation tools leverage time-series, geospatial and statistical insights to empower health analysts."
+                text="Our visualization and transformation tools leverage time-series, geospatial and statistical insights to enable flexible analysis for any type of problem."
               />
             </div>
             <div className="feature-col pure-u-lg-1-3">
               <Icon img="teams" />
               <TileText
                 title="Mission Motivated"
-                text="We invest seriously in building sustainable capacity at every stage of implementation, and always scope deployments with the long-term goal of full local ownership."
+                text="We invest seriously in building sustainable capacity at every stage of implementation, and always scope deployments with the long term goal of full local ownership."
               />
             </div>
           </div>
@@ -107,16 +106,16 @@ class About extends Component {
         <Spacer line />
         <Text
           title="Life at Zenysis"
-          text="We move at a moderate speed compatible with employee happiness and try our best not to break anything. Less of a sprint and more of a brisk saunter."
+          text="We move at a speed compatible with employee happiness and try our best not to break anything. Less of a sprint and more of a brisk saunter."
           shouldCenter
         />
         <div className="features">
           <div className="pure-g">
             <div className="feature-col pure-u-lg-1-3">
-              <Icon img="integrations" />
+              <Icon img="teams" />
               <TileText
-                title="Sensible Indulgence"
-                text="We don’t have bean bags, ping pong or beer on tap, but offer top-line health coverage, noise canceling headphones, and whatever else is essential to doing your best job."
+                title="Diversity and Inclusion"
+                text="As a global company working with vulnerable populations, diversity of identity and experience is both a business and moral imperative. We have a long way to go, but we’re working to get there."
               />
             </div>
             <div className="feature-col pure-u-lg-1-3">
@@ -127,10 +126,10 @@ class About extends Component {
               />
             </div>
             <div className="feature-col pure-u-lg-1-3">
-              <Icon img="teams" />
+              <Icon img="integrations" />
               <TileText
-                title="Diversity and Inclusion"
-                text="As a global company working with vulnerable populations, diversity of identity and experience is both a business and moral imperative. We have a long way to go, but we’re working to get there."
+                title="Sensible Indulgence"
+                text="We don’t have bean bags, ping pong or beer on tap, but offer top-line health coverage, noise canceling headphones, and whatever else is essential to doing your best job."
               />
             </div>
           </div>
@@ -138,7 +137,7 @@ class About extends Component {
         <Spacer line />
         <Text
           title="Join the Team"
-          text="From NGOs to Federal Ministries, our clients rely on our services to provide first-in-class solutions to the most critical problems they face."
+          text="Come build products, relationships and tools to transform the next decade of development."
           shouldCenter
         />
         <div className="center">

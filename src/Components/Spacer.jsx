@@ -2,7 +2,12 @@ import React, { Component } from 'react';
 
 class Spacer extends Component {
 	render() {
-		const { anti, line } = this.props;
+		const { anti, line, margin } = this.props;
+		if (margin) {
+			return (
+				<div className="spacer" style={{marginTop: margin}}></div>
+			)
+		}
 		if (anti) {
 			return (
 				<div className="spacer-anti"></div>
