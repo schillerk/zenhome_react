@@ -194,7 +194,7 @@ class App extends Component {
         <div className="header-wrap" id="testEl">
           <div className="header">
             <a className="logo" onClick={this.handleChange.bind(this, 'home')}>
-              ZENYSIS test
+              ZENYSIS
             </a>
             {this.renderPages()}
           </div>
