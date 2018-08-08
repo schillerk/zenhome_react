@@ -18,7 +18,8 @@ const PAGES = ["Product", "About", "Careers", "Home"];
 class App extends Component {
   constructor(props) {
     super(props)
-    const current = window.location.href.split("/").slice(-1)[0]
+    // const current = window.location.href.split("/").slice(-1)[0]
+    const current = window.location.hash.slice(1)
     this.state = {
       // currentPage: pages.indexOf(current) > -1 ? current : 'home',
       currentPage: current,
@@ -26,10 +27,19 @@ class App extends Component {
     }
 
     this.handleChange = this.handleChange.bind(this);
+    this.handleHashChange = this.handleHashChange.bind(this);
+  }
+
+  handleHashChange() {
+    const current = window.location.hash.slice(1)
+    this.setState({
+      currentPage: current,
+    });
   }
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener("hashchange", this.handleHashChange, false);
 
     document.addEventListener("DOMContentLoaded", function(){
       var el = document.getElementById('nav-icon2')
@@ -56,7 +66,8 @@ class App extends Component {
 
   handleChange(page) {
     this.setState({currentPage: page.replace(/\s/g, '').toLowerCase()});
-    window.history.pushState(null, null, page.replace(/\s/g, '').toLowerCase());
+    // window.history.pushState(null, null, page.replace(/\s/g, '').toLowerCase());
+    window.location.href = '#' + page.replace(/\s/g, '').toLowerCase();
     window.scrollTo(0, 0);
 
     document.getElementById('op').checked = false;
@@ -183,7 +194,7 @@ class App extends Component {
         <div className="header-wrap" id="testEl">
           <div className="header">
             <a className="logo" onClick={this.handleChange.bind(this, 'home')}>
-              ZENYSIS
+              ZENYSIS test
             </a>
             {this.renderPages()}
           </div>
