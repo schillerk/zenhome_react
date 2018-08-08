@@ -18,10 +18,8 @@ const PAGES = ["Product", "About", "Careers", "Home"];
 class App extends Component {
   constructor(props) {
     super(props)
-    // const current = window.location.href.split("/").slice(-1)[0]
     const current = window.location.hash.slice(1)
     this.state = {
-      // currentPage: pages.indexOf(current) > -1 ? current : 'home',
       currentPage: current,
       showLangDropdown: false,
     }
@@ -66,7 +64,6 @@ class App extends Component {
 
   handleChange(page) {
     this.setState({currentPage: page.replace(/\s/g, '').toLowerCase()});
-    // window.history.pushState(null, null, page.replace(/\s/g, '').toLowerCase());
     window.location.href = '#' + page.replace(/\s/g, '').toLowerCase();
     window.scrollTo(0, 0);
 
